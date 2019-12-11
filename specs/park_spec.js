@@ -52,10 +52,11 @@ describe('Park', function() {
     });
 
   it('should be able to find the dinosaur that attracts the most visitors', function (){
-    park.addDino(dino1);
-    park.dinoMostVis(dino1);
-    const actual = park.guestsAttractedPerDay;
-    assert.strictEqual(actual, 50);
+    park.addDino(dino1)
+    park.addDino(dino2);
+    park.addDino(dino3);
+    const actual = park.dinoMostVis();
+    assert.strictEqual(actual, dino1);
 //started this but did not finish,head burst.
   });
 
